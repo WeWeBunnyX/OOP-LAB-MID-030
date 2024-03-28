@@ -35,7 +35,7 @@ public:
         cout << "To begin, enter your name: " << endl;
         cin >> name;
         cout << "Profile created!" << endl;
-       
+        system("cls")
     }
 
 
