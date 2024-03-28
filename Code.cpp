@@ -89,13 +89,12 @@ public:
 
     
     int main()
-
     {
         Restaurant restaurant;
         restaurant.menu();
 
         while (true)
-        
+
     {
         cout << "1. Show time slots" << endl;
         cout << "2. Take a reservation" << endl;
@@ -130,15 +129,6 @@ public:
 
 
 
-
-
-
-
-
-
-
-
-    }
 
 
   
