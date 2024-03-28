@@ -87,6 +87,7 @@ public:
 
         }
 
+};
     
     int main()
     {
@@ -124,7 +125,6 @@ public:
     }
 
     return 0;
-
 }
 
 
@@ -146,4 +146,3 @@ public:
 
 
 
-};
