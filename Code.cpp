@@ -52,15 +52,28 @@ public:
         void takeReservation()
         {
         cout << "Please enter your name: " << endl;
-        getline (cin, name);
+        cin >> name;
         cout << "Please enter your phone number: " << endl;
-        getline (cin,phone);
-
+        cin >> phone;
         cout << "Please enter the time slot you would like to reserve: " << endl;
         cin >> time;
-        Reservation reservation(name, phone, time);
-        addReservation(reservation);
-        cout << "Your reservation has been made!" << endl;
+        bool is_time_available = true;
+        for (auto& reservation : reservations) {
+            if (reservation.time == time) {
+                cout << "That time slot is already reserved." << endl;
+                is_time_available = false;
+                break;
+            }
+        }
+
+        if (is_time_available) {
+            Reservation reservation(name, phone, time);
+            addReservation(reservation);
+            cout << "Your reservation has been made!" << endl;
+        }
+
+    
+
     }
 
 
