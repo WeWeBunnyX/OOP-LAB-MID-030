@@ -72,13 +72,27 @@ public:
             cout << "Your reservation has been made!" << endl;
         }
 
-    
-
     }
 
 
+        void displayReservations()
+        {
+            cout << "Your reservations are as follows: " << endl;
+            for (auto& reservation : reservations)
+            {
+                 cout << "Name: " << reservation.name<<endl;
+                 cout<<"Phone:" << reservation.phone<<endl;
+                 cout<<"Time:" << reservation.time<< endl;
+        }
 
-    }
+        }
+
+        
+  
+
+
+
+
 
 
 
