@@ -20,7 +20,7 @@ public:
 class Restaurant
 {
 private:
-    string name, day, time;
+    string name, day, time, phone;
     vector<Reservation> reservations;
 
     void addReservation(Reservation reservation)
@@ -30,27 +30,27 @@ private:
 
 public:
     void menu()
-        {
+    {
         cout << "Welcome to XYZ restaurant!" << endl;
         cout << "To begin, enter your name: " << endl;
         cin >> name;
         cout << "Profile created!" << endl;
-        system("cls")
-         }
+        system("cls");
+    }
 
-        void displayTimeSlots()
+    void displayTimeSlots()
+    {
+        cout << "\nAvailable time slots are: " << endl;
+        for (int i = 1; i < 6; i++)
         {
-             cout << "Available time slots are: " << endl;
-            for (int i = 1; i < 9; i++)
-             {
-                 string time = to_string(i) + ":00 PM";
-                 cout << time << endl;
-             }
-
+            string time = to_string(i) + ":00 PM";
+            cout << time << endl;
         }
+      
+    }
 
-        void takeReservation()
-        {
+    void takeReservation()
+    {
         cout << "Please enter your name: " << endl;
         cin >> name;
         cout << "Please enter your phone number: " << endl;
@@ -71,31 +71,26 @@ public:
             addReservation(reservation);
             cout << "Your reservation has been made!" << endl;
         }
-
     }
 
-
-        void displayReservations()
-        {
-            cout << "Your reservations are as follows: " << endl;
-            for (auto& reservation : reservations)
-            {
-                 cout << "Name: " << reservation.name<<endl;
-                 cout<<"Phone:" << reservation.phone<<endl;
-                 cout<<"Time:" << reservation.time<< endl;
-            }
-
-        }
-
-};
-    
-    int main()
+    void displayReservations()
     {
-        Restaurant restaurant;
-        restaurant.menu();
+        cout << "Your reservations are: " << endl;
+        for (auto& reservation : reservations)
+        {
+            cout << "Name: " << reservation.name << ", Phone: " << reservation.phone << ", Time: " << reservation.time << endl;
+        }
+    }
+};
 
-        while (true)
+int main()
 
+{
+
+    Restaurant restaurant;
+    restaurant.menu();
+
+    while (true)
     {
         cout << "1. Show time slots" << endl;
         cout << "2. Take a reservation" << endl;
@@ -125,24 +120,5 @@ public:
     }
 
     return 0;
+
 }
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
