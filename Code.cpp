@@ -27,3 +27,26 @@ private:
     {
         reservations.push_back(reservation);
     }
+
+public:
+    void menu()
+    {
+        cout << "Welcome to XYZ restaurant!" << endl;
+        cout << "To begin, enter your name: " << endl;
+        cin >> name;
+        cout << "Profile created!" << endl;
+       
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+};
