@@ -97,6 +97,7 @@ int main()
         cout << "3. Show reservations" << endl;
         cout << "4. Exit" << endl;
         cout << "Please enter your choice: ";
+        cout<<"\n";
         int choice;
         cin >> choice;
 
