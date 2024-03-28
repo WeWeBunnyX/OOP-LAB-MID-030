@@ -83,11 +83,64 @@ public:
                  cout << "Name: " << reservation.name<<endl;
                  cout<<"Phone:" << reservation.phone<<endl;
                  cout<<"Time:" << reservation.time<< endl;
-        }
+            }
 
         }
 
+    
+    int main()
+
+    {
+        Restaurant restaurant;
+        restaurant.menu();
+
+        while (true)
         
+    {
+        cout << "1. Show time slots" << endl;
+        cout << "2. Take a reservation" << endl;
+        cout << "3. Show reservations" << endl;
+        cout << "4. Exit" << endl;
+        cout << "Please enter your choice: ";
+        int choice;
+        cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+            restaurant.displayTimeSlots();
+            break;
+        case 2:
+            restaurant.takeReservation();
+            break;
+        case 3:
+            restaurant.displayReservations();
+            break;
+        case 4:
+            return 0;
+        default:
+            cout << "Invalid choice." << endl;
+        }
+
+    }
+
+    return 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
   
 
 
